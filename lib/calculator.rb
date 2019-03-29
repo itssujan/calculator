@@ -10,4 +10,6 @@ class Calculator
       # do something
     end
   end
+
+  def plus; end
 end

@@ -13,4 +13,8 @@ RSpec.describe Calculator do
       it { expect(subject).to respond_to(:"#{i.humanize}") }
     end
   end
+
+  context 'when function on plus is called' do
+    it { expect(subject).to respond_to(:plus) }
+  end
 end
