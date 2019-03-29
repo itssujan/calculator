@@ -8,7 +8,9 @@ class Calculator
   OPERATORS = { plus: '+', minus: '-', times: '*', divided_by: '/' }.freeze
 
   (START_NUMBER..END_NUMBER).each do |i|
-    define_method(:"#{i.humanize}") do
+    define_method(:"#{i.humanize}") do |operation = nil|
+      return eval("#{i} #{operation}") unless operation.nil?
+
       i
     end
   end

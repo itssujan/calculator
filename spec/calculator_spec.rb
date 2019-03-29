@@ -59,4 +59,8 @@ RSpec.describe Calculator do
       it { expect(subject.divided_by(i)).to eq("/#{i}") }
     end
   end
+
+  context '#zero' do
+    it { expect(subject.zero('+1')).to eq(1) }
+  end
 end
