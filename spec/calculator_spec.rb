@@ -41,4 +41,22 @@ RSpec.describe Calculator do
       it { expect(subject.plus(i)).to eq("+#{i}") }
     end
   end
+
+  context '#minus' do
+    (0..9).each do |i|
+      it { expect(subject.minus(i)).to eq("-#{i}") }
+    end
+  end
+
+  context '#times' do
+    (0..9).each do |i|
+      it { expect(subject.times(i)).to eq("*#{i}") }
+    end
+  end
+
+  context '#divided_by' do
+    (0..9).each do |i|
+      it { expect(subject.divided_by(i)).to eq("/#{i}") }
+    end
+  end
 end
