@@ -17,4 +17,17 @@ RSpec.describe Calculator do
   context 'when function on plus is called' do
     it { expect(subject).to respond_to(:plus) }
   end
+
+  context 'when function on minus is called' do
+    it { expect(subject).to respond_to(:minus) }
+  end
+
+  context 'when function on times is called' do
+    it { expect(subject).to respond_to(:times) }
+  end
+
+  context 'when function on divided_by is called' do
+    it { expect(subject).to respond_to(:divided_by) }
+  end
+
 end
