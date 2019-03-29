@@ -60,6 +60,7 @@ RSpec.describe Calculator do
     end
   end
 
+  # Tests all functions from zero - nine to perform additions
   (0..9).each do |i|
     context "##{i.humanize}" do
       (0..9).each do |j|
@@ -69,6 +70,7 @@ RSpec.describe Calculator do
     end
   end
 
+  # Tests all functions from zero - nine to perform subtraction
   (0..9).each do |i|
     context "##{i.humanize}" do
       (0..9).each do |j|
@@ -78,6 +80,7 @@ RSpec.describe Calculator do
     end
   end
 
+  # Tests all functions from zero - nine to perform multiplication
   (0..9).each do |i|
     context "##{i.humanize}" do
       (0..9).each do |j|
@@ -87,6 +90,7 @@ RSpec.describe Calculator do
     end
   end
 
+  # Tests all functions from zero - nine to perform division
   (0..9).each do |i|
     context "##{i.humanize}" do
       (1..9).each do |j|
