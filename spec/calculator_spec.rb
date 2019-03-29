@@ -1,9 +1,7 @@
 require 'calculator'
 require 'humanize'
 
-RSpec.describe Calculator do
-  subject { Calculator.new }
-
+RSpec.describe Object do
   context 'when function zero is called' do
     it { expect(subject).to respond_to(:zero) }
   end

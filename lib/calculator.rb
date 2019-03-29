@@ -1,17 +1,17 @@
 require 'humanize'
 
 # Calculator can be used to perform different arthimetic operations on numbers
-class Calculator
+class Object
   START_NUMBER = 0
   END_NUMBER = 9
 
   OPERATORS = { plus: '+', minus: '-', times: '*', divided_by: '/' }.freeze
 
-  (START_NUMBER..END_NUMBER).each do |i|
-    define_method(:"#{i.humanize}") do |operation = nil|
-      return eval("#{i} #{operation}") unless operation.nil?
+  (START_NUMBER..END_NUMBER).each do |number|
+    define_method(:"#{number.humanize}") do |operation = nil|
+      return eval("#{number} #{operation}") unless operation.nil?
 
-      i
+      number
     end
   end
 
