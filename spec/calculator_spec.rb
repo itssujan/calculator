@@ -68,4 +68,31 @@ RSpec.describe Calculator do
       end
     end
   end
+
+  (0..9).each do |i|
+    context "##{i.humanize}" do
+      (0..9).each do |j|
+        param = "-#{j}"
+        it { expect(subject.send(:"#{i.humanize}", param)).to eq(i - j) }
+      end
+    end
+  end
+
+  (0..9).each do |i|
+    context "##{i.humanize}" do
+      (0..9).each do |j|
+        param = "*#{j}"
+        it { expect(subject.send(:"#{i.humanize}", param)).to eq(i * j) }
+      end
+    end
+  end
+
+  (0..9).each do |i|
+    context "##{i.humanize}" do
+      (1..9).each do |j|
+        param = "/#{j}"
+        it { expect(subject.send(:"#{i.humanize}", param)).to eq(i / j) }
+      end
+    end
+  end
 end
