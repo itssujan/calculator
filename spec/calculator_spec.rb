@@ -30,4 +30,9 @@ RSpec.describe Calculator do
     it { expect(subject).to respond_to(:divided_by) }
   end
 
+  context 'when number functions are called' do
+    (0..9).each do |i|
+     it { expect(subject.send(:"#{i.humanize}")).to eq(i) }
+    end
+  end
 end

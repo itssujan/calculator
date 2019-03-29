@@ -5,11 +5,11 @@ class Calculator
   START_NUMBER = 0
   END_NUMBER = 9
 
-  OPERATORS = %w[plus minus times divided_by]
+  OPERATORS = %w[plus minus times divided_by].freeze
 
   (START_NUMBER..END_NUMBER).each do |i|
     define_method(:"#{i.humanize}") do
-      # do something
+      i
     end
   end
 
