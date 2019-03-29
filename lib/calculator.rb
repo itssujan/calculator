@@ -14,8 +14,8 @@ class Calculator
   end
 
   OPERATORS.each do |operator|
-    define_method(:"#{operator}") do
-      # do something
+    define_method(:"#{operator}") do |num|
+      "+#{num}"
     end
   end
 end

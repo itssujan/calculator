@@ -32,7 +32,13 @@ RSpec.describe Calculator do
 
   context 'when number functions are called' do
     (0..9).each do |i|
-     it { expect(subject.send(:"#{i.humanize}")).to eq(i) }
+      it { expect(subject.send(:"#{i.humanize}")).to eq(i) }
+    end
+  end
+
+  context '#plus' do
+    (0..9).each do |i|
+      it { expect(subject.plus(i)).to eq("+#{i}") }
     end
   end
 end
