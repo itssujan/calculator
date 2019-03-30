@@ -63,7 +63,8 @@ Run this command to run rubocop
 
 ## Design Considerations
 
-Object class has been used so that the methods can be executed directly
+1. Object class has been used so that the methods can be executed directly
+2. This can also be defined as a Module so that it can be included in a class and called in the form of one(plus(two))
 
 ## Contributing
 
